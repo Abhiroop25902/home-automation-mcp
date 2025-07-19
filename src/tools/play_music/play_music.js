@@ -15,7 +15,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.PlayMusicParamSchema = void 0;
 exports.play_music = play_music;
 const axios_1 = __importDefault(require("axios"));
-const EnvHandler_1 = __importDefault(require("../../lib/EnvHandler"));
+const SecretHandler_1 = __importDefault(require("../../lib/SecretHandler"));
 const zod_1 = require("zod");
 exports.PlayMusicParamSchema = {
     title: zod_1.z.string(),
@@ -23,7 +23,7 @@ exports.PlayMusicParamSchema = {
 };
 function play_music(param) {
     return __awaiter(this, void 0, void 0, function* () {
-        const envHandler = EnvHandler_1.default.getInstance();
+        const envHandler = SecretHandler_1.default.getInstance();
         const iftttInstanceId = envHandler.getEnvValue({
             key: "IFTTT_RUN_MUSIC_KEY",
         });

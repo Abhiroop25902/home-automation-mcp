@@ -2,10 +2,9 @@ import { SecretManagerServiceClient } from "@google-cloud/secret-manager";
 
 const secretClient = new SecretManagerServiceClient();
 
-export default async function getSecret(secretId: string, projectId?: string) {
-  const fullName = `projects/${
-    projectId || process.env.GOOGLE_CLOUD_PROJECT
-  }/secrets/${secretId}/versions/latest`;
+export default async function getSecret(secretId: string) {
+  const projectId = await secretClient.getProjectId();
+  const fullName = `projects/${projectId}/secrets/${secretId}/versions/latest`;
 
   const [version] = await secretClient.accessSecretVersion({ name: fullName });
 

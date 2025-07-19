@@ -7,7 +7,7 @@ export const ToolsPrompts: Array<Parameters<McpServer["registerPrompt"]>> = [
     ToolId.PLAY_MUSIC.toString(),
     {
       title: `${ToolId.PLAY_MUSIC.toString()} Prompt`,
-      description: `Create a prompt to process the ${ToolId.PLAY_MUSIC.toString()} tool`,
+      description: `Create a prompt to process the ${ToolId.PLAY_MUSIC.toString()} tool for playing song in user's phone`,
       argsSchema: PlayMusicParamSchema,
     },
     ({ message }) => ({

@@ -8,7 +8,7 @@ export const ToolsInfo: Array<Parameters<McpServer["registerTool"]>> = [
     {
       title: ToolId.PLAY_MUSIC.toString(),
       description:
-        "Generate a notification on iPhone, tapping on which Plays the Music",
+        "Play given music on user's phone",
       inputSchema: PlayMusicParamSchema,
     },
     async ({ title, artist }) => ({

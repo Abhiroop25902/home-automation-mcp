@@ -36,7 +36,9 @@ app.post("/mcp", async (req, res) => {
       return transportManager.getExistingTransport(sessionId);
     } else if (isInitializeRequest(req.body) && !sessionId) {
       console.log(`New session request: ${req.body.method}`);
-      return transportManager.createNewTransport();
+      const transport = transportManager.createNewTransport();
+      server.connect(transport);
+      return transport;
     }
 
     return undefined;

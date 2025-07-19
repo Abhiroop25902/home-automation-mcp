@@ -17,7 +17,9 @@ export async function play_music(param: PlayMusicParamType) {
 
   // don't care about response
   const response = await axios.get<string>(link, {
-    params: param,
+    params: {
+      value1: JSON.stringify(param)
+    },
   });
 
   return response.data;

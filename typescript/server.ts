@@ -14,8 +14,9 @@ ToolsInfo.forEach((tool) => server.registerTool(...tool));
 
 const app = express();
 app.use(cors());
+app.use(express.json());
 
-app.post("/mcp", (req, res) => {
+app.post("/mcp", async (req, res) => {
   const transportManager = TransportManager.getInstance();
   const sessionId = req.headers["mcp-session-id"] as string | undefined;
   const transport = (() => {
@@ -46,7 +47,7 @@ app.post("/mcp", (req, res) => {
     return;
   }
 
-  transport.handleRequest(req, res, req.body);
+  await transport.handleRequest(req, res, req.body);
 });
 
 const port = parseInt(process.env["PORT"] ?? "3000", 10);

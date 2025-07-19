@@ -1,15 +1,14 @@
 {
   "engines": {
-    "node": ">=22.14.0"
+    "node": ">=22.17.1"
   },
   "name": "home-automation-mcp",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "src/server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc",
-    "serve": "node src/server.js",
-    "deploy": "npm run build && npm run serve"
+    "gcp-build": "tsc",
+    "start": "node src/server.js"
   },
   "author": "",
   "license": "ISC",
@@ -17,8 +16,7 @@
   "devDependencies": {
     "@types/cors": "^2.8.19",
     "@types/express": "^5.0.3",
-    "@types/node": "^24.0.15",
-    "typescript": "^5.8.3"
+    "@types/node": "^24.0.15"
   },
   "dependencies": {
     "@google-cloud/secret-manager": "^6.1.0",
@@ -26,6 +24,7 @@
     "axios": "^1.10.0",
     "cors": "^2.8.5",
     "express": "^5.1.0",
-    "zod": "^3.25.76"
+    "zod": "^3.25.76",
+    "typescript": "^5.8.3"
   }
 }

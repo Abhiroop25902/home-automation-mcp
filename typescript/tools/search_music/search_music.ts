@@ -1,4 +1,5 @@
 import axios from "axios";
+import { title } from "process";
 import { z } from "zod";
 
 // https://performance-partners.apple.com/search-api
@@ -54,7 +55,7 @@ export async function search_music({
     {
       params: {
         media: "music",
-        limit: 1,
+        limit: 5,
         term: musicName,
       },
     }
@@ -70,8 +71,10 @@ export async function search_music({
     throw new Error("No Result Found");
   }
 
-  return JSON.stringify({
-    title: responseData.results[0].trackName,
-    artist: responseData.results[0].artistName,
-  });
+  return JSON.stringify(
+    responseData.results.map((e) => ({
+      title: e.trackName,
+      artist: e.artistName,
+    }))
+  );
 }

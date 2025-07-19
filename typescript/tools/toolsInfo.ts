@@ -1,9 +1,6 @@
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp";
 import { play_music, PlayMusicParamSchema } from "./play_music/play_music";
-
-const enum ToolId {
-  PLAY_MUSIC = "PLAY_MUSIC",
-}
+import { ToolId } from "./toolsEnum";
 
 export const ToolsInfo: Array<Parameters<McpServer["registerTool"]>> = [
   [

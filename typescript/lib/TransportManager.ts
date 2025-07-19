@@ -35,9 +35,6 @@ export default class TransportManager {
 
     transport.onclose = () => {
       const sid = transport.sessionId;
-      console.log(
-        `Transport closed for session ${sid}, removing from transports map`
-      );
       if (sid && this.#transports[sid]) delete this.#transports[sid];
     };
 

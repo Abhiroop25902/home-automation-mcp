@@ -14,24 +14,23 @@ Open Home Automation Access to GPTs using MCP
 
    - This essentially Throws a notification with a payload of a link `shortcuts://run-shortcut?name=PlaySongViaQueryParam&input=text&text={{Value1}}`, where Value1 is a payload of form `{title: string, artist: string}`
 
-   - ![IFTTT Shortcut](https://github.com/Abhiroop25902/home-automation-mcp/raw/refs/heads/main/readme_src/ifttt.jpg)
+   - ![IFTTT Shortcut](https://github.com/Abhiroop25902/home-automation-mcp/raw/refs/heads/main/readme_src/ifttt.jpg?raw=true)
 
 2. iOS Shortcut
-    - This shortcut gets executed when user interacts with the IFTTT Notification
-        - This can be automated using  PushCut, but its locked behind a paywall
-        - HomeBridge implementation might not require this as well
-    -  - ![iOS Shortcut](https://github.com/Abhiroop25902/home-automation-mcp/raw/refs/heads/main/readme_src/iOS_Shortcut.mp4)
-    
+   - This shortcut gets executed when user interacts with the IFTTT Notification
+     - This can be automated using PushCut, but its locked behind a paywall
+     - HomeBridge implementation might not require this as well
+   - https://github.com/Abhiroop25902/home-automation-mcp/raw/refs/heads/main/readme_src/iOS_Shortcut.mp4
 
 ## Demo
 
 ### LM Studio
 
-![LM Studio Demo](https://github.com/Abhiroop25902/home-automation-mcp/raw/refs/heads/main/readme_src/LM_Studio_demo.mp4)
+https://github.com/Abhiroop25902/home-automation-mcp/raw/refs/heads/main/readme_src/LM_Studio_demo.mp4
 
 ### Phone
 
-![Phone Demo](https://github.com/Abhiroop25902/home-automation-mcp/raw/refs/heads/main/readme_src/iPhone_demo.mp4)
+https://github.com/Abhiroop25902/home-automation-mcp/raw/refs/heads/main/readme_src/iPhone_demo.mp4
 
 ## Notes
 

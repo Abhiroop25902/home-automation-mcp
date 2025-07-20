@@ -1,5 +1,4 @@
 import axios from "axios";
-import { title } from "process";
 import { z } from "zod";
 
 // https://performance-partners.apple.com/search-api
@@ -57,6 +56,7 @@ export async function search_music({
         media: "music",
         limit: 5,
         term: musicName,
+        country: "IN",
       },
     }
   );
